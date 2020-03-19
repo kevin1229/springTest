@@ -2,6 +2,14 @@ package polymorphism;
 
 public class SamsungTV implements TV {
 
+	public void initMethod() {
+		System.out.println("Object Initialize Process ...");
+	}
+	
+	public void destroyMethod() {
+		System.out.println("Object Destroy Process ...");
+	}
+		
 	@Override
 	public void powerOn() {
 		// TODO Auto-generated method stub
