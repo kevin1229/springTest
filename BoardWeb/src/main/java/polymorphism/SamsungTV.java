@@ -2,6 +2,17 @@ package polymorphism;
 
 public class SamsungTV implements TV {
 
+	private SonySpeaker speaker;
+	
+	public SamsungTV() {
+		System.out.println("===> SamsungTV(1) Object Create");
+	}
+	
+	public SamsungTV(SonySpeaker speaker) {
+		System.out.println("===> SamsungTV(2) Object Create");
+		this.speaker = speaker;
+	}
+	
 	public void initMethod() {
 		System.out.println("Object Initialize Process ...");
 	}
@@ -25,13 +36,13 @@ public class SamsungTV implements TV {
 	@Override
 	public void volumeUp() {
 		// TODO Auto-generated method stub
-		System.out.println("SamsungTV --- Volume Up Tv");
+		speaker.volumeUp();
 	}
 
 	@Override
 	public void volumeDown() {
 		// TODO Auto-generated method stub
-		System.out.println("SamsungTV --- Volume Down Tv");
+		speaker.volumeDown();
 	}
 
 }
