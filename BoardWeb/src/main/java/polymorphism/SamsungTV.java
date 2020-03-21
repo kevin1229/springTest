@@ -41,25 +41,21 @@ public class SamsungTV implements TV {
 		
 	@Override
 	public void powerOn() {
-		// TODO Auto-generated method stub
 		System.out.println("SamsungTV --- Turn On Tv : Price (" + price +")");
 	}
 
 	@Override
 	public void powerOff() {
-		// TODO Auto-generated method stub
 		System.out.println("SamsungTV --- Turn Off Tv");
 	}
 
 	@Override
 	public void volumeUp() {
-		// TODO Auto-generated method stub
 		speaker.volumeUp();
 	}
 
 	@Override
 	public void volumeDown() {
-		// TODO Auto-generated method stub
 		speaker.volumeDown();
 	}
 

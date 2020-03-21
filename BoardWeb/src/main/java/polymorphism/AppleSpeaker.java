@@ -7,14 +7,12 @@ public class AppleSpeaker implements Speaker {
 	}
 	@Override
 	public void volumeUp() {
-		// TODO Auto-generated method stub
 		System.out.println("AppleSpeaker --- Volume Up");
 
 	}
 
 	@Override
 	public void volumeDown() {
-		// TODO Auto-generated method stub
 		System.out.println("AppleSpeaker --- Volume Down");
 	}
 
