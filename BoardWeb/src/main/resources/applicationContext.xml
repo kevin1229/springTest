@@ -11,12 +11,16 @@
 	<context:component-scan base-package="com.springbook.biz">
 	</context:component-scan>
 	
+	
+	<!-- 
 	<bean id="userService" class="com.springbook.biz.impl.UserServiceImpl">
 		<property name="userDAO" ref="userDAO" />
 	</bean>
 	
 	<bean id="userDAO" class="com.springbook.biz.dao.UserDAO" />
-
+	 -->
+	 
+	 
 	<!-- 
 	<context:component-scan base-package="polymorphism" />	
 	<bean class="polymorphism.SonySpeaker"></bean>
