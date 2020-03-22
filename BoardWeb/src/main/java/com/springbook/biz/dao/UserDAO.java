@@ -9,31 +9,31 @@ import org.springframework.stereotype.Repository;
 import com.springbook.biz.common.JDBCUtil;
 import com.springbook.biz.vo.UserVO;
 
-@Repository
+@Repository("userDAO")
 public class UserDAO {
 
 	private Connection conn = null;
 	private PreparedStatement  stmt = null;
 	private ResultSet rs = null;
 	
-	private final String USER_GET = "select * from users where id=? and passwd=?";
+	private final String USER_GET = "select * from users where id=? and password=?";
 	
 	public UserVO getUser(UserVO vo) {
 		UserVO user = null;
 		
 		try {
 			
-			System.out.println("===> JDBC·Î getUser() ±â´É Ã³¸®");
+			System.out.println("===> JDBCë¡œ getUser() ê¸°ëŠ¥ ì²˜ë¦¬");
 			conn = JDBCUtil.getConnection();
 			stmt = conn.prepareStatement(USER_GET);
 			stmt.setString(1, vo.getId());
-			stmt.setString(2, vo.getPasswd());
+			stmt.setString(2, vo.getPassword());
 			rs = stmt.executeQuery();
 			
 			if(rs.next()) {
 				user = new UserVO();
 				user.setId(rs.getString("id"));
-				user.setPasswd(rs.getString("passwd"));
+				user.setPassword(rs.getString("password"));
 				user.setName(rs.getString("name"));
 				user.setRole(rs.getString("role"));
 			}

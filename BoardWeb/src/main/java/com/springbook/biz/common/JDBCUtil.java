@@ -11,7 +11,7 @@ public class JDBCUtil {
 	public static Connection getConnection() {
 		try {
 			Class.forName("org.postgresql.Driver");
-			return DriverManager.getConnection("jdbc:postgresql://localhost:5432/SDB", "postgres", "1234qwer");
+			return DriverManager.getConnection("jdbc:postgresql://localhost:5432/SpringStudy", "kevin", "1234qwer");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

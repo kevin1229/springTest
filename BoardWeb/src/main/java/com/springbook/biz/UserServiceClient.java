@@ -14,13 +14,13 @@ public class UserServiceClient {
 		
 		UserVO vo = new UserVO();
 		vo.setId("test");
-		vo.setPasswd("test123");
+		vo.setPassword("test123");
 		
 		UserVO user = userService.getUser(vo);
 		if(user != null) {
-			System.out.println(user.getName() + "´Ô È¯¿µÇÕ´Ï´Ù.");
+			System.out.println(user.getName() + "ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤.");
 		} else {
-			System.out.println("·Î±×ÀÎ ½ÇÆĞ");
+			System.out.println("ë¡œê·¸ì¸ ì‹¤íŒ¨");
 		}
 		
 		container.close();

@@ -3,20 +3,45 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-		http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context
-		http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context-4.2.xsd
+						http://www.springframework.org/schema/aop
+						http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
 
 	<context:component-scan base-package="com.springbook.biz">
 	</context:component-scan>
 	
+	<bean id="log" class="com.springbook.biz.common.Log4jAdvice"></bean>
+	<bean id="around" class="com.springbook.biz.common.AroundAdvice"></bean>
+	<aop:config>
+		<aop:pointcut id="allPointcut" 
+					  expression="execution(* com.springbook.biz..*Impl.*(..))"/>
+		<aop:pointcut id="getPointcut"
+					  expression="execution(* com.springbook.biz..*Impl.get*(..))"/>
+					  
+		<aop:aspect ref="log">
+			<aop:after pointcut-ref="getPointcut" method="printLogging" />
+		</aop:aspect>
+		
+		<aop:aspect ref="around">
+			<aop:around pointcut-ref="allPointcut" method="aroundLog" />
+		</aop:aspect>
+	</aop:config>
+	
+	
+	
+	<!-- 
 	<bean id="userService" class="com.springbook.biz.impl.UserServiceImpl">
 		<property name="userDAO" ref="userDAO" />
 	</bean>
 	
 	<bean id="userDAO" class="com.springbook.biz.dao.UserDAO" />
-
+	 -->
+	 
+	 
 	<!-- 
 	<context:component-scan base-package="polymorphism" />	
 	<bean class="polymorphism.SonySpeaker"></bean>
@@ -31,6 +56,7 @@
 		<constructor-arg index="1" value="270000"></constructor-arg>
 	</bean>		
 	-->
+	
 	<!-- 
 	<bean id="tv" class="polymorphism.SamsungTV"> 
 		<property name="speaker" ref="apple"></property>
