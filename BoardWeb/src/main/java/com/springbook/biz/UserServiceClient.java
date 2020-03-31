@@ -4,7 +4,7 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 import com.springbook.biz.impl.UserService;
-import com.springbook.biz.vo.UserVO;
+import com.springbook.biz.user.UserVO;
 
 public class UserServiceClient {
 	public static void main(String[] args) {
