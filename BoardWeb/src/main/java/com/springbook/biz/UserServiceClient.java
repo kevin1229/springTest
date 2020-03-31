@@ -3,7 +3,7 @@ package com.springbook.biz;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-import com.springbook.biz.impl.UserService;
+import com.springbook.biz.user.UserService;
 import com.springbook.biz.user.UserVO;
 
 public class UserServiceClient {

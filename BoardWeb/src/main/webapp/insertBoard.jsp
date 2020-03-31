@@ -12,9 +12,9 @@
 	<body>
 		<center>
 			<h1>Registry Board</h1>
-			<a href="logout_proc.jsp">Log-out</a>
+			<a href="logout.do">Log-out</a>
 			<hr>
-				<form action="insertBoard_proc.jsp" method="post">
+				<form action="insertBoard.do" method="post">
 					<table border="1" cellpadding="0" cellspacing="0">
 						<tr>
 							<td bgcolor="orange" width="70">Title</td>
