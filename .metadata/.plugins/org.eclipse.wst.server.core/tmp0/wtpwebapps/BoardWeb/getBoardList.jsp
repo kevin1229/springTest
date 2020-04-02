@@ -13,15 +13,16 @@
 <body>
 	<center>
 		<h1>Board List</h1>
-		<h3>Mr. Test Welcome... <a href="logout.do">Log-out</a></h3>
+		<h3>Mr.${userName}!! Welcome... <a href="logout.do">Log-out</a></h3>
 		
-		<form action="getBoardList.jsp" method="post">
+		<form action="getBoardList.do" method="post">
 			<table border="1" cellpadding="0" cellspacing="0" width="700">
 				<tr>
 					<td align="right">
 						<select name="searchCondition">
-							<option value="TITLE">Title </option>
-							<option value="CONTENT">Content</option>
+						<c:forEach items="${conditionMap }" var="option">
+							<option value="${option.value }">${option.key }</option>
+						</c:forEach>
 						</select>
 						<input name="searchKeyword" type="text" />
 						<input type="submit" value="Search"/>

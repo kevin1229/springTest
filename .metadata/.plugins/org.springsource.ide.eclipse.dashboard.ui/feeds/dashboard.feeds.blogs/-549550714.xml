@@ -5,7 +5,24 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2020-04-01T05:55:00Z</updated>
+  <updated>2020-04-02T14:00:41Z</updated>
+  <entry>
+    <title>Spring Security 5.3.1, 5.2.3, 5.1.9, 5.0.15, 4.2.15 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/04/02/spring-security-5-3-1-5-2-3-5-1-9-5-0-15-4-2-15-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Rob Winch</name>
+    </author>
+    <id>tag:spring.io,2020-03-31:4018</id>
+    <updated>2020-04-02T14:00:41Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the community, I&amp;#8217;m pleased to announce the release of Spring Security 5.3.1 (&lt;a href="https://github.com/spring-projects/spring-security/releases/tag/5.3.1.RELEASE"&gt;release notes&lt;/a&gt;),  5.2.3 (&lt;a href="https://github.com/spring-projects/spring-security/releases/tag/5.2.3.RELEASE"&gt;release notes&lt;/a&gt;), 5.1.9 (&lt;a href="https://github.com/spring-projects/spring-security/releases/tag/5.1.9.RELEASE"&gt;release notes&lt;/a&gt;) , 5.0.15 (&lt;a href="https://github.com/spring-projects/spring-security/releases/tag/5.0.15.RELEASE"&gt;release notes&lt;/a&gt;), 4.2.15 (&lt;a href="https://github.com/spring-projects/spring-security/releases/tag/4.2.15.RELEASE"&gt;release notes&lt;/a&gt;). These releases deliver bug fixes along with some minor improvements. Users are encouraged to update to the latest patch release.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-security/"&gt;Project Site&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/"&gt;Reference&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;Help&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Tips: Manipulating the Platform with the Spring Cloud Cloud Foundry Java Client Autoconfiguration</title>
     <link rel="alternate" href="https://spring.io/blog/2020/04/01/spring-tips-manipulating-the-platform-with-the-spring-cloud-cloud-foundry-java-client-autoconfiguration" />
@@ -1395,49 +1412,6 @@ class GatewayConfiguration {&#xD;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You can try this flow out yourself by running &lt;code&gt;curl -XPOST http://localhost:8080/put/one&lt;/code&gt;. That will upload a file to the FTP account whose bean name is &lt;code&gt;one&lt;/code&gt;. Try &lt;code&gt;curl -XPOST http://localhost:8080/put/two&lt;/code&gt; to upload a file to the FTP account whose bean name is &lt;code&gt;two&lt;/code&gt;. &lt;/p&gt;&lt;h2&gt;&lt;a href="#conclusion" class="anchor" name="conclusion"&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;In this Spring Tips installment, we&amp;rsquo;ve looked at how to handle all sorts of FTP integration scenarios. You can use what you&amp;rsquo;ve learned here to work with the other support in the framework for remote file systems. &lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - March 17th, 2020</title>
-    <link rel="alternate" href="https://spring.io/blog/2020/03/17/this-week-in-spring-march-17th-2020" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2020-03-17:3999</id>
-    <updated>2020-03-17T23:55:19Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to yet another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! We&amp;rsquo;re already midway through March 2020, and I can&amp;rsquo;t believe how crazy things have gotten! You&amp;rsquo;re no doubt experiencing something equally as odd too. The pandemic has truly changed this world in a way nothing else has in recent memory. It&amp;rsquo;s crazy to think about the course this virus has taken and the journey we&amp;rsquo;ve all taken along with it. &lt;/p&gt;
-&lt;p&gt;I live in San Francisco, and we&amp;rsquo;re currently under lockdown. It&amp;rsquo;s technically a crime now to leave your home for anything but essential needs like food, medicine, or walking the dog. That&amp;rsquo;s OK. That just leaves more time for us to learn and socialize, albeit online and from the confines of our own homes. We&amp;rsquo;re very lucky, you know? How wild. Most of us who work on software should be able to work from home. There are some glaring exceptions, of course, as detailed &lt;a href="https://twitter.com/dhh/status/1239286206803742721"&gt;in this &lt;em&gt;epic&lt;/em&gt; megathread&lt;/a&gt;, but basically, software can be done online. It requires some of us to revise our workflows, but it can be done. &lt;/p&gt;
-&lt;p&gt;We&amp;rsquo;re privileged. It&amp;rsquo;s important to not forget that good fortune, that good luck, especially now, when the pandemic is hitting so many people in our communities who aren&amp;rsquo;t so privileged. Consider giving to your local shelters. Even if the COVID19 virus doesn&amp;rsquo;t get someone, the changes to the economy in response to the COVID19 virus might. &lt;/p&gt;
-&lt;p&gt;For those of us who are otherwise healthy and happy, but perhaps craving some knowledge, I hope you&amp;rsquo;ve already registered for the free, epic, online-only, virtual, interactive, 24+ hour-long #SpringLive event starting this Thursday. If you&amp;rsquo;re in the Americas, EMEA or APJ, you&amp;rsquo;ll be sure to find content streaming at a time when you can watch it. &lt;/p&gt;
-&lt;p&gt;And in the meantime, there is a &lt;em&gt;TON&lt;/em&gt; of new stuff to get to, so&amp;hellip; let&amp;rsquo;s! &lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/java/status/1240009714328461312"&gt;It&amp;rsquo;s here, it&amp;rsquo;s finally here! Java 14! Finally, some good news!&lt;/a&gt;. I love this release.&lt;/li&gt;
-  &lt;li&gt;I even detailed some of its amazing new syntaxes and features in a dedicated &lt;a href="https://spring.io/blog/2020/03/11/spring-tips-java-14-or-can-your-java-do-this"&gt;&lt;em&gt;Spring Tips&lt;/em&gt; video called &amp;ldquo;Spring Tips: Java 14 (or: Can Your Java Do This?)&amp;rdquo;&lt;/a&gt; that looks at some ways to use Java 14 and Spring together.&lt;/li&gt;
-  &lt;li&gt;You can use Java 14 with &lt;a href="https://spring.io/blog/2020/03/12/spring-boot-2-3-0-m3-available-now"&gt;Spring Boot 2.3.0.M3, which is available now&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;The only thing is, I didn&amp;rsquo;t have a great way to show using Java 14 records with Spring Data. I wish I had this &lt;a href="https://github.com/odrotbohm/spring-record-support"&gt;experimental support: odrotbohm/spring-record-support: A Spring extension to make JDK 14&amp;rsquo;s records work OOTB with Spring libraries&lt;/a&gt;. This is currently being developed by Spring team legend Oliver Drotbohm. Enjoy!&lt;/li&gt;
-  &lt;li&gt;In last week&amp;rsquo;s &lt;a href="https://spring.io/blog/2020/03/13/a-bootiful-podcast-john-hawley-on-oss-at-vmware-security-and-more"&gt;&lt;em&gt;A Bootiful Podcast&lt;/em&gt;, I interview John Hawley on OSS at VMWare, Security, and more&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;By the way, I hope you&amp;rsquo;ve all registered for the upcoming &lt;a href="https://spring.io/blog/2020/03/16/register-now-for-spring-live-an-interactive-virtual-24-hour-long-conference-for-you-spring-fans"&gt;&lt;em&gt;Spring Live&lt;/em&gt; that&amp;rsquo;ll take place on both Thursday and Friday this week. It&amp;rsquo;s a virtual, 24-hour long, interactive conference for you, Spring fans!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Learn about how to fire-and-forget communication between &lt;a href="https://twitter.com/springcentral/status/1239961192266747904"&gt; microservices in this epic post by Ben Wilcock&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/03/11/spring-integration-5-3-milestone-3-available"&gt;Spring Integration 5.3 Milestone 3 Available&lt;/a&gt;&lt;br/&gt;register-now-for-spring-live-an-interactive-virtual-24-hour-long-conference-for-you-spring-fans)&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/03/11/spring-data-neumann-m4-released"&gt;Spring Data Neumann M4 released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/03/11/spring-cloud-data-flow-2-4-2-ga-released"&gt;Spring Cloud Data Flow 2.4.2 GA Released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/confluentinc/status/1239961908721188864"&gt;There are some nice tips on how to &lt;/a&gt; improve replication flows in your Apache Kafka deployments&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://sdtimes.com/java/whats-coming-in-the-java-14-release/"&gt;SDtimes has a nice roundup of some of the new features in Java 14&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/channel/UC4VZwhJ4T42SVHy9QbZ5rKw"&gt;Daily Code Buffer - YouTube&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/SpringData/status/1239867585937772546"&gt;Want to use Spring Data with Java 14&amp;rsquo;s experimental record support? Try out this new (experimental) support&lt;/a&gt;!&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/VMwareTanzu/status/1239753197302013952"&gt;Are you registered and ready for the upcoming Spring Live event?&lt;/a&gt; It&amp;rsquo;s happening on March 19th, the Spring equinox, it&amp;rsquo;s a free, 24+ hour-long, interactive community-driven event, and we have a ton of exciting stuff on the agenda! Do &lt;em&gt;NOT&lt;/em&gt; miss this!&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/JavaAtMicrosoft/status/1237286504751198208"&gt;Spring Data CosmosDB 2.2.2 is now available&lt;/a&gt;!&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.businessleader.co.uk/how-to-manage-virtual-teams-best-practices-for-remote-working-during-the-coronavirus-outbreak/80888/"&gt;This isn&amp;rsquo;t Spring-specific, &lt;em&gt;per se&lt;/em&gt;, but it&amp;rsquo;s a nice look at how to do remote work and leadership during the coronavirus pandemic&lt;/a&gt; - useful!&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/VMwareTanzu/status/1239605140010737666"&gt;Did you know that for every #SpringLive attendee, VMware Tanzu will make a donation to the @funds4disaster (COVID-19 Response Fund)? Register today and join us this Thursday:&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I really liked this video on how to build a &lt;a href="https://www.youtube.com/watch?v=8hjng9gzgnq"&gt;Coronavirus tracker with Spring Boot - great watch and great information&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;A great talk over on InfoQ on going from 0-100 &lt;a href="https://www.infoq.com/presentations/spring-data-jpa/"&gt; in 60 Minutes with Spring Data JPA &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.infoq.com/presentations/spring-tools-4-boot-theia/"&gt;Spring Tools 4: Bootiful Spring Tooling for Desktop and Cloud&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://vladmihalcea.com/multiline-string-java-text-blocks/"&gt;Multiline String literals with Java Text Blocks - Vlad Mihalcea&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://reflectoring.io/spring-security-password-handling/"&gt;Handling Passwords with Spring Boot and Spring Security&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.rabbitmq.com/blog/2020/03/10/this-month-in-rabbitmq-february-2020-recap/"&gt;RabbitMQ » Blog Archive » This Month in RabbitMQ, February 2020 Recap - Messaging that just works&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.wimdeblauwe.com/blog/2020/03/10/laravel-intermediate-task-list-port-to-spring/"&gt;Port of the Laravel Intermediate Task List tutorial to Spring Boot with Thymeleaf - Wim Deblauwe&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
