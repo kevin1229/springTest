@@ -2,4 +2,10 @@
 <typeInfoHistroy>
 <typeInfo handle="=BoardWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;polymorphism{TV.java[TV" modifiers="513" timestamp="1584630964000"/>
 <typeInfo handle="=BoardWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;polymorphism{Speaker.java[Speaker" modifiers="513" timestamp="1584771089000"/>
+<typeInfo handle="=BoardWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.springbook.view.user{LogoutController.java[LogoutController" modifiers="1" timestamp="1585838723000"/>
+<typeInfo handle="=BoardWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.springbook.biz.board.impl{BoardServiceImpl.java[BoardServiceImpl" modifiers="1" timestamp="1586029150000"/>
+<typeInfo handle="=BoardWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.springbook.view.user{LoginController.java[LoginController" modifiers="1" timestamp="1586030825000"/>
+<typeInfo handle="=BoardWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.springbook.biz.board{BoardVO.java[BoardVO" modifiers="1" timestamp="1586029468000"/>
+<typeInfo handle="=BoardWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.springbook.view.board{BoardController.java[BoardController" modifiers="1" timestamp="1586094863000"/>
+<typeInfo handle="=BoardWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.springbook.biz.board.impl{BoardDAO.java[BoardDAO" modifiers="1" timestamp="1586029197000"/>
 </typeInfoHistroy>

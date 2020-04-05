@@ -1,0 +1,8 @@
+package com.springbook.biz.util;
+
+public class SqlSessionFactoryBean {
+	
+	private static SqlSessionFactory sessionFactory = null;
+
+
+}

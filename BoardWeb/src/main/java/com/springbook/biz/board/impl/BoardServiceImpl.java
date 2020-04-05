@@ -13,6 +13,7 @@ public class BoardServiceImpl implements BoardService {
 
 	@Autowired
 	private BoardDAO boardDAO;
+	//private BoardDAOSpring boardDAO;
 	
 	
 	@Override

@@ -1,24 +1,52 @@
 package com.springbook.biz.board.impl;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import com.springbook.biz.board.BoardVO;
-import com.springbook.biz.common.JDBCUtil;
+import com.springbook.biz.util.SqlSessionFactoryBean;
 
 @Repository("boardDAO")
 public class BoardDAO {
 	
+	private SqlSession mybatis;
+	
+	public BoardDAO() {
+		mybatis = SqlSessionFactoryBean.getSqlSessionInstance();
+	}
+	
+	public void insertBoard(BoardVO vo) {
+		mybatis.insert("BoardDAO.insertBoard", vo);
+		mybatis.commit();
+	}
+	
+	public void updateBoard(BoardVO vo) {
+		mybatis.update("BoardDAO.updateBoard",vo);
+		mybatis.commit();
+	}
+	
+	public void deleteBoard(BoardVO vo) {
+		mybatis.delete("BoardDAO.deleteBoard",vo);
+		mybatis.commit();
+	}
+	
+	public BoardVO getBoard(BoardVO vo) {
+		return (BoardVO) mybatis.selectOne("BoardDAO.getBoard",vo);
+	}
+	
+	public List<BoardVO> getBoardList(BoardVO vo) {
+		return mybatis.selectList("BoardDAO.getBoardList",vo);
+	}
+	
+
+	
+	/*
 	private Connection conn = null;
 	private PreparedStatement stmt = null;
 	private ResultSet rs = null;
-	
+
 	private final String BOARD_INSERT = "insert into board(seq, title, writer, content) "
 										+ "values( "
 										+ "(select coalesce( max(seq), 0)+1 from board), "
@@ -28,6 +56,8 @@ public class BoardDAO {
 	private final String BOARD_DELETE = "delete from board where seq=?";
 	private final String BOARD_GET = "select * from board where seq=?";
 	private final String BOARD_LIST = "select * from board order by seq desc";
+	private final String BOARD_LIST_T = "select * from board where title like '%'||?||'%' order by seq desc";
+	private final String BOARD_LIST_C = "select * from board where content like '%'||?||'%' order by seq desc";
 	
 	public void insertBoard(BoardVO vo) {
 		System.out.println("===> JDBC로 insertBoard() 기능 처리");
@@ -108,11 +138,20 @@ public class BoardDAO {
 	
 	public List<BoardVO> getBoardList(BoardVO vo) {
 		System.out.println("===> JDBC로 getBoardList() 기능 처리");
+		
 		List<BoardVO> boardList = new ArrayList<BoardVO>();
 		
 		try {
 			conn = JDBCUtil.getConnection();
-			stmt = conn.prepareStatement(BOARD_LIST);
+			String isContent = vo.getSearchCondition();
+			if(isContent.equals("TITLE")) {
+				stmt = conn.prepareStatement(BOARD_LIST_T);
+			}
+			else if( isContent.equals("CONTENT")) {
+				stmt = conn.prepareStatement(BOARD_LIST_C);
+			}
+
+			stmt.setString(1, vo.getSearchKeyword());
 			rs = stmt.executeQuery();
 			
 			while(rs.next()) {
@@ -135,5 +174,6 @@ public class BoardDAO {
 		
 		return boardList;
 	}
+	*/
 	
 }

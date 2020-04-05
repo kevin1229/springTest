@@ -14,7 +14,7 @@
 			<h1>Registry Board</h1>
 			<a href="logout.do">Log-out</a>
 			<hr>
-				<form action="insertBoard.do" method="post">
+				<form action="insertBoard.do" method="post" enctype="multipart/form-data">
 					<table border="1" cellpadding="0" cellspacing="0">
 						<tr>
 							<td bgcolor="orange" width="70">Title</td>
@@ -32,6 +32,12 @@
 							<td bgcolor="orange">Content</td>
 							<td align="left">
 								<textarea name="content" cols="40" rows="10"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td bgcolor="orange" width="70">Upload</td>
+							<td align="left">
+								<input type="file" name="uploadFile" />
 							</td>
 						</tr>
 						<tr>

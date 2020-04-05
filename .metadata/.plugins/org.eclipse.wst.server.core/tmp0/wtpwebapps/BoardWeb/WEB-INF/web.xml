@@ -4,6 +4,7 @@
 		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 		 					 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
+  <!-- Encoding Set -->
   <filter>
   	<filter-name>characterEncoding</filter-name>
   	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -18,7 +19,7 @@
   	<url-pattern>*.do</url-pattern>
   </filter-mapping>
 
-
+  <!-- Servlet Set -->
   <servlet>
     <servlet-name>action</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -32,4 +33,17 @@
     <servlet-name>action</servlet-name>
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
+  
+  <!-- ContextLoaderListener Set -->
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>classpath:applicationContext.xml</param-value>
+  </context-param>
+  
+  <listener>
+  	<listener-class>
+  		org.springframework.web.context.ContextLoaderListener
+  	</listener-class>
+  </listener>
+  
 </web-app>

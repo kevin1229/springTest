@@ -1,6 +1,0 @@
-package com.springbook.view.board;
-
-@Controller
-public class BoardController {
-
-}
