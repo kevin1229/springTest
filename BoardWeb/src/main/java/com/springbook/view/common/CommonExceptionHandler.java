@@ -32,6 +32,7 @@ public class CommonExceptionHandler {
 
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("exception", e);
+		System.out.println("detailMessage : " + e.getMessage());
 		mav.setViewName("/common/error.jsp");
 		
 		return mav;

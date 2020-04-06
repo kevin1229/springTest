@@ -24,7 +24,12 @@ import com.springbook.biz.board.BoardVO;
 public class BoardController {
 
 	@Autowired
-	private BoardService boardService;
+	private BoardService boardDAO;
+	
+	/*
+	@Autowired
+	private BoardServiceImpl boardDAO;
+	*/
 	
 	
 	@RequestMapping("/dataTransform.do")
@@ -34,7 +39,7 @@ public class BoardController {
 		vo.setSearchCondition("TITLE");
 		vo.setSearchKeyword("");
 
-		List<BoardVO> boardList = boardService.getBoardList(vo);
+		List<BoardVO> boardList = boardDAO.getBoardList(vo);
 		BoardListVO boardListVO = new BoardListVO();
 		boardListVO.setBoardList(boardList);
 
@@ -65,7 +70,7 @@ public class BoardController {
 			uploadFile.transferTo(new File("/Users/kevin/Downloads/SpringTest/uploadedFile/"+fileName));
 		}
 
-		boardService.insertBoard(vo);
+		boardDAO.insertBoard(vo);
 
 		return "getBoardList.do";
 	}
@@ -81,7 +86,7 @@ public class BoardController {
 		System.out.println("Reg Date : " + vo.getRegDate());
 		System.out.println("View Count : " + vo.getCnt());
 
-		boardService.updateBoard(vo);
+		boardDAO.updateBoard(vo);
 		
 		return "getBoardList.do";		
 	}	
@@ -91,7 +96,7 @@ public class BoardController {
 
 		System.out.println("글 삭제 처리");
 
-		boardService.deleteBoard(vo);
+		boardDAO.deleteBoard(vo);
 		
 		return "getBoardList.do";
 	}
@@ -101,7 +106,7 @@ public class BoardController {
 
 		System.out.println("글 상세 조회 처리");
 		
-		model.addAttribute("board", boardService.getBoard(vo));
+		model.addAttribute("board", boardDAO.getBoard(vo));
 		
 		return "getBoard.jsp";
 	}
@@ -118,7 +123,7 @@ public class BoardController {
 		if(vo.getSearchKeyword() == null)
 			vo.setSearchKeyword("");
 
-		model.addAttribute("boardList",boardService.getBoardList(vo));
+		model.addAttribute("boardList",boardDAO.getBoardList(vo));
 
 		return "getBoardList.jsp";
 	}

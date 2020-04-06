@@ -4,17 +4,26 @@
 
 <mapper namespace="BoardDAO">
 
+	<resultMap type="board" id="boardResult">
+		<id property="seq" column="SEQ" />
+		<result property="title" column="TITLE" />
+		<result property="writer" column="WRITER"/>
+		<result property="content" column="CONTENT"/>
+		<result property="regDate" column="REGDATE"/>
+		<result property="cnt" column="CNT"/>
+	</resultMap>
+
 	<insert id="insertBoard">
 		insert into board(seq, title, writer, content)
 		values((select nvl(max(seq), 0)+1 from board), #{title}, #{writer}, #{content})	
 	</insert>
 	
-	<update id="updateBoar">
+	<update id="updateBoard">
 		update board set title=#{title}, content=#{content} where seq=#{seq}
 	</update>
 	
 	<delete id="deleteBoard">
-		delete board where seq=#{seq}
+		delete from board where seq=#{seq}
 	</delete>
 	
 	<select id="getBoard" resultType="board">

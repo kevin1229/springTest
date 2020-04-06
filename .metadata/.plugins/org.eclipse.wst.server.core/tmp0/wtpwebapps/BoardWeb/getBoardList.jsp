@@ -55,8 +55,7 @@
 			<c:forEach items="${boardList }" var="board">
 			<tr>
 				<td>${board.seq }</td>
-				<td align="left"><a href="getBoard.do?seq=${board.seq }">
-								${board.title }</a></td>
+				<td align="left"><a href="getBoard.do?seq=${board.seq }">${board.title }</a></td>
 				<td>${board.writer }</td>	
 				<td><fmt:formatDate value="${board.regDate }" pattern="yyyy-MM-dd" /></td>
 				<td>${board.cnt }</td>		
