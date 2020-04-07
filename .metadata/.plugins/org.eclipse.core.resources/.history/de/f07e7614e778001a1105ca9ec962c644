@@ -2,7 +2,6 @@ package com.springbook.view.board;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -124,14 +123,7 @@ public class BoardController {
 		if(vo.getSearchKeyword() == null)
 			vo.setSearchKeyword("");
 
-		List<BoardVO> list = new ArrayList<BoardVO>();
-
-		if(vo.getSearchCondition().equals("TITLE"))
-			list = boardDAO.getBoardList(vo);
-		else
-			list = boardDAO.getBoardListContent(vo);
-
-		model.addAttribute("boardList",list);
+		model.addAttribute("boardList",boardDAO.getBoardList(vo));
 
 		return "getBoardList.jsp";
 	}

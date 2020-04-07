@@ -16,7 +16,7 @@
 	<insert id="insertBoard">
 		<![CDATA[
 			INSERT INTO BOARD(SEQ, TITLE, WRITER, CONTENT)
-			VALUES((SELECT NVL(MAX(SEQ), 0)+1 FROM BOARD), 
+			VALUES((SELECT COALESCE(MAX(SEQ), 0)+1 FROM BOARD), 
 			#{title}, #{writer}, #{content})	
 		]]>
 	</insert>
@@ -51,4 +51,12 @@
 			ORDER BY SEQ DESC
 		]]>
 	</select>
+	<select id="getBoardListContent" parameterType="board" resultMap="boardResult">
+		<![CDATA[
+			SELECT * FROM BOARD
+			WHERE CONTENT LIKE '%'||#{searchKeyword}||'%'
+			ORDER BY SEQ DESC
+		]]>
+	</select>
+
 </mapper>

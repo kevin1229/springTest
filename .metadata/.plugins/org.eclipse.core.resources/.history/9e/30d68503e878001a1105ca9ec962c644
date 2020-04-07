@@ -33,10 +33,6 @@ public class BoardDAO {
 	public List<BoardVO> getBoardList(BoardVO vo) {
 		return mybatis.selectList("BoardDAO.getBoardList",vo);
 	}
-
-	public List<BoardVO> getBoardListContent(BoardVO vo) {
-		return mybatis.selectList("BoardDAO.getBoardListContent",vo);
-	}
 	
 
 	

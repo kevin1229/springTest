@@ -47,16 +47,8 @@
 	<select id="getBoardList" parameterType="board" resultMap="boardResult">
 		<![CDATA[
 			SELECT * FROM BOARD
-			WHERE TITLE LIKE '%'||#{searchKeyword}||'%'
+			WHERE TITLE ILIKE '%'||#{searchKeyword}||'%'
 			ORDER BY SEQ DESC
 		]]>
 	</select>
-	<select id="getBoardListContent" parameterType="board" resultMap="boardResult">
-		<![CDATA[
-			SELECT * FROM BOARD
-			WHERE CONTENT LIKE '%'||#{searchKeyword}||'%'
-			ORDER BY SEQ DESC
-		]]>
-	</select>
-
 </mapper>
